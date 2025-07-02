@@ -325,7 +325,8 @@ static void port_add(snd_seq_client_info_t* cinfo, snd_seq_port_info_t* pinfo, u
         */
         len = strlen(snd_seq_port_info_get_name(pinfo));
         if ( (strlen(snd_seq_client_info_get_name(cinfo)) + len + 3) < sizeof(name) ) {
-            sprintf(name, "%s - %s", snd_seq_client_info_get_name(cinfo), snd_seq_port_info_get_name(pinfo));
+            // sprintf(name, "%s - %s", snd_seq_client_info_get_name(cinfo), snd_seq_port_info_get_name(pinfo));
+            sprintf(name, "%s", snd_seq_client_info_get_name(cinfo));
             len = strlen(name);
         } else {
             len = min(len, sizeof(name) - 1);
@@ -396,7 +397,8 @@ static void port_add(snd_seq_client_info_t* cinfo, snd_seq_port_info_t* pinfo, u
         */
         len = strlen(snd_seq_port_info_get_name(pinfo));
         if ( (strlen(snd_seq_client_info_get_name(cinfo)) + len + 3) < sizeof(name) ) {
-            sprintf(name, "%s - %s", snd_seq_client_info_get_name(cinfo), snd_seq_port_info_get_name(pinfo));
+            // sprintf(name, "%s - %s", snd_seq_client_info_get_name(cinfo), snd_seq_port_info_get_name(pinfo));
+            sprintf(name, "%s", snd_seq_client_info_get_name(cinfo));
             len = strlen(name);
         } else {
             len = min(len, sizeof(name) - 1);
